@@ -1,85 +1,178 @@
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RizwanXBrand</title>
 
 <style>
-body{
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:monospace;
-background:#000;
-background-image:
-linear-gradient(rgba(0,255,120,0.15) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,255,120,0.15) 1px, transparent 1px);
-background-size:40px 40px;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 color:white;
+
+/* Premium hacker background */
+
+background:
+radial-gradient(circle at top, rgba(0,255,120,0.1), transparent 35%),
+radial-gradient(circle at bottom, rgba(0,255,200,0.08), transparent 30%),
+linear-gradient(rgba(0,255,128,0.1) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,128,0.1) 1px, transparent 1px),
+linear-gradient(180deg,#020403,#000);
+
+background-size:auto,auto,45px 45px,45px 45px,auto;
+
+}
+
+.container{
 text-align:center;
+max-width:600px;
+padding:40px;
+border-radius:20px;
+
+background:rgba(0,10,7,0.6);
+
+border:1px solid rgba(0,255,128,0.3);
+
+box-shadow:
+0 0 25px rgba(0,255,128,0.2),
+inset 0 0 20px rgba(0,255,128,0.05);
 }
 
-/* Title */
-.title{
-font-size:45px;
+.logo{
+font-size:42px;
 color:#00ff99;
-text-shadow:0 0 20px #00ff99;
-margin-top:60px;
+
+text-shadow:
+0 0 10px #00ff99,
+0 0 30px #00ff99;
+
+margin-bottom:10px;
 }
 
-/* Button */
+.subtitle{
+margin-bottom:30px;
+color:#dffff1;
+}
+
 .btn{
 display:block;
-width:80%;
-margin:20px auto;
-padding:15px;
-border-radius:30px;
-font-size:18px;
+width:100%;
+padding:16px;
+border-radius:15px;
 text-decoration:none;
+margin:12px 0;
+font-size:18px;
+font-weight:bold;
+transition:0.2s;
 }
 
-/* WhatsApp */
+.btn:hover{
+transform:scale(1.03);
+}
+
 .whatsapp{
+
 background:#25D366;
 color:black;
-font-weight:bold;
+
+box-shadow:
+0 0 15px rgba(37,211,102,0.6);
+
 }
 
-/* Channel */
 .channel{
-background:#0a0a0a;
+
+background:#07130f;
+
 border:2px solid #00ff99;
+
 color:#00ff99;
+
+box-shadow:
+0 0 15px rgba(0,255,153,0.4);
+
 }
 
-/* Text Box */
 .info{
-width:85%;
-margin:auto;
+
+margin-top:25px;
+
 padding:20px;
+
 border-radius:15px;
-border:1px solid #00ff99;
-margin-top:30px;
-color:#ddd;
+
+border:1px solid rgba(0,255,153,0.4);
+
+background:rgba(0,20,15,0.5);
+
 }
 
-/* Footer */
 .footer{
-margin-top:50px;
-color:#aaa;
+
+margin-top:25px;
+
+color:#b6ffd6;
+
 }
 
 </style>
 
-<h1 class="title">RIZWANXBRAND</h1>
+</head>
 
-<p>Welcome To Rizwan Home</p>
+<body>
 
-<a class="btn whatsapp" href="#">Contact On WhatsApp</a>
+<div class="container">
 
-<a class="btn channel" href="#">Join SMS Updates Channel</a>
+<div class="logo">⚡ RIZWANXBRAND ⚡</div>
+
+<div class="subtitle">
+Welcome To RizwanXBrand Home
+</div>
+
+<a class="btn whatsapp"
+href="https://wa.me/923060729141">
+
+Contact On WhatsApp
+
+</a>
+
+<a class="btn channel"
+href="https://whatsapp.com/channel/0029VbCoOFkFMqrSCwFxhQ0j">
+
+Follow The SMS Updates Family 💞
+
+</a>
 
 <div class="info">
-RizwanXBrand Support Team is available 24 hours to help you.<br><br>
-For the latest tools, SMS updates and new services, please join our official channel and stay connected with us.
+
+RizwanXBrand Support Team is available 24 hours for you.
+
+<br><br>
+
+For the latest tools, SMS updates and new services,
+please join our official channel and stay connected
+with us.
+
 </div>
 
 <div class="footer">
+
 Made With RizwanXBrand 💚
+
+</div>
+
 </div>
 
 </body>
+</html>
