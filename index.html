@@ -1,178 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RizwanXBrand</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RizwanXBrand</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-<style>
+    html, body{
+      width:100%;
+      height:100%;
+      font-family:"Courier New", monospace;
+      scroll-behavior:smooth;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:monospace;
-}
+    body{
+      color:#ffffff;
+      background:
+        radial-gradient(circle at top, rgba(0,255,120,0.12), transparent 30%),
+        radial-gradient(circle at bottom, rgba(0,255,120,0.08), transparent 30%),
+        linear-gradient(rgba(0,255,100,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,100,0.08) 1px, transparent 1px),
+        linear-gradient(180deg, #010302 0%, #02110b 45%, #000000 100%);
+      background-size:auto, auto, 38px 38px, 38px 38px, auto;
+      overflow-x:hidden;
+    }
 
-body{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
+    .main-page{
+      min-height:100vh;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px 16px;
+    }
 
-/* Premium hacker background */
+    .page-box{
+      width:100%;
+      max-width:900px;
+      min-height:92vh;
+      border:1px solid rgba(0,255,153,0.18);
+      border-radius:28px;
+      background:rgba(0, 10, 8, 0.55);
+      backdrop-filter: blur(8px);
+      box-shadow:
+        0 0 30px rgba(0,255,153,0.10),
+        inset 0 0 20px rgba(0,255,153,0.03);
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:34px 22px;
+      position:relative;
+    }
 
-background:
-radial-gradient(circle at top, rgba(0,255,120,0.1), transparent 35%),
-radial-gradient(circle at bottom, rgba(0,255,200,0.08), transparent 30%),
-linear-gradient(rgba(0,255,128,0.1) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,255,128,0.1) 1px, transparent 1px),
-linear-gradient(180deg,#020403,#000);
+    .top-area{
+      text-align:center;
+    }
 
-background-size:auto,auto,45px 45px,45px 45px,auto;
+    .icon{
+      font-size:50px;
+      margin-bottom:10px;
+      color:#ffd000;
+      text-shadow:0 0 18px #ffd000;
+    }
 
-}
+    .title{
+      font-size:48px;
+      font-weight:700;
+      letter-spacing:2px;
+      color:#00ff99;
+      text-shadow:
+        0 0 10px #00ff99,
+        0 0 24px rgba(0,255,153,0.7);
+    }
 
-.container{
-text-align:center;
-max-width:600px;
-padding:40px;
-border-radius:20px;
+    .subtitle{
+      margin-top:12px;
+      font-size:18px;
+      color:#ecfff5;
+      opacity:0.95;
+    }
 
-background:rgba(0,10,7,0.6);
+    .line{
+      width:150px;
+      height:3px;
+      background:#00ff99;
+      margin:22px auto 0;
+      border-radius:20px;
+      box-shadow:0 0 12px #00ff99;
+    }
 
-border:1px solid rgba(0,255,128,0.3);
+    .center-area{
+      width:100%;
+      max-width:700px;
+      margin:0 auto;
+    }
 
-box-shadow:
-0 0 25px rgba(0,255,128,0.2),
-inset 0 0 20px rgba(0,255,128,0.05);
-}
+    .btn{
+      display:block;
+      width:100%;
+      text-align:center;
+      text-decoration:none;
+      padding:18px 18px;
+      border-radius:18px;
+      font-size:22px;
+      font-weight:bold;
+      margin:16px 0;
+      transition:0.25s ease;
+    }
 
-.logo{
-font-size:42px;
-color:#00ff99;
+    .btn:hover{
+      transform:translateY(-2px);
+    }
 
-text-shadow:
-0 0 10px #00ff99,
-0 0 30px #00ff99;
+    .whatsapp-btn{
+      background:linear-gradient(135deg, #25D366, #1fb955);
+      color:#051b0e;
+      box-shadow:
+        0 0 18px rgba(37,211,102,0.45),
+        0 0 36px rgba(37,211,102,0.15);
+    }
 
-margin-bottom:10px;
-}
+    .channel-btn{
+      background:linear-gradient(135deg, #07130f, #0a1d17);
+      color:#00ff99;
+      border:2px solid #00ff99;
+      box-shadow:
+        0 0 16px rgba(0,255,153,0.18),
+        inset 0 0 12px rgba(0,255,153,0.04);
+    }
 
-.subtitle{
-margin-bottom:30px;
-color:#dffff1;
-}
+    .info-card{
+      margin-top:24px;
+      padding:28px 20px;
+      border-radius:22px;
+      border:1px solid rgba(0,255,153,0.28);
+      background:rgba(0, 18, 12, 0.45);
+      box-shadow:
+        0 0 18px rgba(0,255,153,0.08),
+        inset 0 0 12px rgba(0,255,153,0.04);
+      text-align:center;
+    }
 
-.btn{
-display:block;
-width:100%;
-padding:16px;
-border-radius:15px;
-text-decoration:none;
-margin:12px 0;
-font-size:18px;
-font-weight:bold;
-transition:0.2s;
-}
+    .info-title{
+      font-size:25px;
+      color:#00ff99;
+      margin-bottom:12px;
+      text-shadow:0 0 10px rgba(0,255,153,0.35);
+    }
 
-.btn:hover{
-transform:scale(1.03);
-}
+    .info-text{
+      font-size:18px;
+      line-height:1.9;
+      color:#effff5;
+    }
 
-.whatsapp{
+    .footer{
+      text-align:center;
+      font-size:17px;
+      color:#d7ffe8;
+      opacity:0.95;
+      margin-top:26px;
+    }
 
-background:#25D366;
-color:black;
+    @media (max-width:700px){
+      .page-box{
+        min-height:95vh;
+        padding:26px 14px;
+        border-radius:22px;
+      }
 
-box-shadow:
-0 0 15px rgba(37,211,102,0.6);
+      .title{
+        font-size:34px;
+      }
 
-}
+      .subtitle{
+        font-size:15px;
+      }
 
-.channel{
+      .btn{
+        font-size:18px;
+        padding:16px 14px;
+      }
 
-background:#07130f;
+      .info-title{
+        font-size:21px;
+      }
 
-border:2px solid #00ff99;
+      .info-text{
+        font-size:15px;
+        line-height:1.8;
+      }
 
-color:#00ff99;
-
-box-shadow:
-0 0 15px rgba(0,255,153,0.4);
-
-}
-
-.info{
-
-margin-top:25px;
-
-padding:20px;
-
-border-radius:15px;
-
-border:1px solid rgba(0,255,153,0.4);
-
-background:rgba(0,20,15,0.5);
-
-}
-
-.footer{
-
-margin-top:25px;
-
-color:#b6ffd6;
-
-}
-
-</style>
-
+      .footer{
+        font-size:15px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <section class="main-page">
+    <div class="page-box">
 
-<div class="container">
+      <div class="top-area">
+        <div class="icon">⚡</div>
+        <h1 class="title">RIZWANXBRAND</h1>
+        <p class="subtitle">Welcome to RizwanXBrand Home</p>
+        <div class="line"></div>
+      </div>
 
-<div class="logo">⚡ RIZWANXBRAND ⚡</div>
+      <div class="center-area">
+        <a class="btn whatsapp-btn" href="https://wa.me/923060729141" target="_blank">
+          Contact on WhatsApp
+        </a>
 
-<div class="subtitle">
-Welcome To RizwanXBrand Home
-</div>
+        <a class="btn channel-btn" href="https://whatsapp.com/channel/0029VbCoOFkFMqrSCwFxhQ0j" target="_blank">
+          Join SMS Updates Channel
+        </a>
 
-<a class="btn whatsapp"
-href="https://wa.me/923060729141">
+        <div class="info-card">
+          <h2 class="info-title">24/7 Support</h2>
+          <p class="info-text">
+            RizwanXBrand Support is available 24 hours for you.<br><br>
+            For the latest updates, new services, and important SMS information,
+            join our official channel and stay connected with us.
+          </p>
+        </div>
+      </div>
 
-Contact On WhatsApp
+      <div class="footer">
+        Made with RizwanXBrand 🔥
+      </div>
 
-</a>
-
-<a class="btn channel"
-href="https://whatsapp.com/channel/0029VbCoOFkFMqrSCwFxhQ0j">
-
-Follow The SMS Updates Family 💞
-
-</a>
-
-<div class="info">
-
-RizwanXBrand Support Team is available 24 hours for you.
-
-<br><br>
-
-For the latest tools, SMS updates and new services,
-please join our official channel and stay connected
-with us.
-
-</div>
-
-<div class="footer">
-
-Made With RizwanXBrand 💚
-
-</div>
-
-</div>
-
+    </div>
+  </section>
 </body>
 </html>
